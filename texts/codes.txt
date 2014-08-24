@@ -1,0 +1,63 @@
+<h3 id="code">Code</h3>
+
+<p>To indicate a span of code, wrap it with backtick quotes (<code>`</code>).
+Unlike a pre-formatted code block, a code span indicates code within a
+normal paragraph. For example:</p>
+
+<pre><code>Use the `printf()` function.
+</code></pre>
+
+<p>will produce:</p>
+
+<pre><code>&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+</code></pre>
+
+<p>To include a literal backtick character within a code span, you can use
+multiple backticks as the opening and closing delimiters:</p>
+
+<pre><code>``There is a literal backtick (`) here.``
+</code></pre>
+
+<p>which will produce this:</p>
+
+<pre><code>&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;
+</code></pre>
+
+<p>The backtick delimiters surrounding a code span may include spaces —
+one after the opening, one before the closing. This allows you to place
+literal backtick characters at the beginning or end of a code span:</p>
+
+<pre><code>A single backtick in a code span: `` ` ``
+
+A backtick-delimited string in a code span: `` `foo` ``
+</code></pre>
+
+<p>will produce:</p>
+
+<pre><code>&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;
+</code></pre>
+
+<p>With a code span, ampersands and angle brackets are encoded as HTML
+entities automatically, which makes it easy to include example HTML
+tags. Markdown will turn this:</p>
+
+<pre><code>Please don't use any `&lt;blink&gt;` tags.
+</code></pre>
+
+<p>into:</p>
+
+<pre><code>&lt;p&gt;Please don't use any &lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+</code></pre>
+
+<p>You can write this:</p>
+
+<pre><code>`&amp;#8212;` is the decimal-encoded equivalent of `&amp;mdash;`.
+</code></pre>
+
+<p>to produce:</p>
+
+<pre><code>&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded
+equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;
+</code>

@@ -1,0 +1,12 @@
+.icon:before{
+   display: inline-block;
+   background-size: 3rem 3rem;
+   content: "";
+   width: 3rem;
+   height: 3rem;
+}
+
+
+
+.icon.forward:before { background-image: url("images/icons/forward.png"); }
+.icon.menu:before { background-image: url("images/icons/menu.png"); }

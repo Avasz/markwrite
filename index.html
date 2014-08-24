@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+   <link rel="stylesheet" type="text/css" href="style/icons.css"/>
+   <link rel="stylesheet" type="text/css" href="style/principal.css"/>
+   <link rel="stylesheet" type="text/css" href="style/header.css"/>
+   <link rel="stylesheet" type="text/css" href="style/sidebar.css"/>
+   <link rel="stylesheet" type="text/css" href="style/menuaction.css"/>
+   <link rel="stylesheet" type="text/css" href="style/menulist.css"/>
+   <link rel="stylesheet" type="text/css" href="style/pagebody.css"/>
+
+   <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+   <script type="text/javascript" src="js/dispatcher.js"></script>
+   <script type="text/javascript" src="js/menuaction.js"></script>
+   <script type="text/javascript" src="js/jquery-ui.js"></script>
+   <script type="text/javascript" src="js/temporary.js"></script>
+   <script type="text/javascript" src="js/menulist.js"></script>
+   <script type="text/javascript" src="js/pagebody.js"></script>
+   <script type="text/javascript" src="js/install.js"></script>
+   <script type="text/javascript" src="js/toolbar.js"></script>
+   <script type="text/javascript" src="js/sidebar.js"></script>
+   <script type="text/javascript" src="js/syntax.js"></script>
+   <script src="js/showdown.js"></script>
+   <script src="js/buttons.js"></script>
+   <script src="js/main.js"></script>
+
+   <title>Markwrite</title>
+</head>
+
+<body >
+  <section class="principal">
+      <header id="topper">
+        <h1>Markwrite</h1>
+          <ul>
+            <li id="sidebar_trigger" class="icon menu"></li>
+          </ul>
+        </header>
+      <div id="bar" class="barc">
+        <ul id="met">
+          <li id="hdr" class="icon hdrc"  title="Headers" onclick="$('#header_drop').toggle();">
+            <div id="header_drop" class="dh" style="background-color:#FFF !important;">
+                <div id="hdr1" class="dh" onclick="buttonclick(this.id);"><h1>H1</h1></div>
+                <div id="hdr2"  class="dh" onclick="buttonclick(this.id);"><h2>H2</h2></div>
+                <div id="hdr3"  class="dh" onclick="buttonclick(this.id);"><h3>H3</h3></div>
+                <div id="hdr4"  class="dh" onclick="buttonclick(this.id);"><h4>H4</h4></div>
+                <div id="hdr5"  class="dh" onclick="buttonclick(this.id);"><h5>H5</h5></div>
+                <div id="hdr6"  class="dh" onclick="buttonclick(this.id);"><h6>H6</h6></div>
+            </div>
+          </li>
+          <li id="bld" class="icon bldc" title="Bold" onclick="buttonclick(this.id);"></li>
+          <li id="itl" class="icon itlc" title="Italic"  onclick="buttonclick(this.id);"></li>
+          <li id="img" class="icon imgc"  title="Image" onclick="buttonclick(this.id);"></li>
+          <li id="uli" class="icon ulic"  title="Unordered List" onclick="buttonclick(this.id);"><em></em></li>
+          <li id="oli"   title="Ordered List" class="icon olic" onclick="buttonclick(this.id);"></li>
+          <li id="lnks" class="icon lnksc"  title="Links"  onclick="buttonclick(this.id);"></li>
+          <li id="blk" class="icon blkc" title="Block Element"  onclick="buttonclick(this.id);"></li>
+          <li id="cdblk" class="icon cdblkc" title="Code Block"  onclick="buttonclick(this.id);"></li>
+        </ul>
+      </div>
+
+
+
+      <div id="area"  onclick="$('#header_drop').hide();">
+	       <textarea class="lined" id="textarea" onkeyup="preview(this);"  onclick="$('.hints').hide();"></textarea>
+
+	       <div id="output" class="alined" onclick="$('#container').hide();"></div>
+        <div id="container">
+
+        </div>
+      </div>
+  </section>
+
+
+  <section class="sidebar">
+    <header id="sidetop">
+      <h2>Preferences</h2>
+    </header>
+    <div class="menulist">
+      <menu type="popup" label="View As">
+        <menuitem type="radio" radiogroup="viewas" label="HTML"  onclick="viewashtml();" id="viewashtml"></menuitem>
+        <menuitem type="radio" radiogroup="viewas" label="Plain Text"  onclick="preview(textarea);" id="viewastext"></menuitem>
+      </menu>
+      <menu type="popup" label="Syntax">
+	      <menu type="popup" label="Block Elements">
+          <menuitem type="radio" radiogroup="syntax" label="Header" onclick="$('#container').show().load('texts/header.txt')";></menuitem>
+	        <menuitem type="radio" radiogroup="syntax" label="Paragraph" onclick="$('#container').show().load('texts/para.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Block" onclick="$('#container').show().load('texts/block.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="List" onclick="$('#container').show().load('texts/list.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Code Blocks" onclick="$('#container').show().load('texts/code.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Horizontal Rules" onclick = "$('#container').show().load('texts/hrrule.txt');"></menuitem>
+        </menu>
+        <menu type="popup" label="Span Elements">
+          <menuitem type="radio" radiogroup="syntax" label="Link" onclick="$('#container').show().load('texts/links.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Emphasis" onclick = "$('#container').show().load('texts/emphasis.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Code" onclick="$('#container').show().load('texts/codes.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Images" onclick = "$('#container').show().load('texts/imagex.txt');"></menuitem>
+        </menu>
+        <menu type="popup" label="Miscellaneous">
+          <menuitem type="radio" radiogroup="syntax" label="Backslash Escape" onclick="$('#container').show().load('texts/backslash.txt');"></menuitem>
+          <menuitem type="radio" radiogroup="syntax" label="Automatic Links" onclick="$('#container').show().load('texts/autolinks.txt');"></menuitem>
+        </menu>
+      </menu>
+      <menu type="popup" label="Modes">
+		    <menuitem type="radio" radiogroup="modes" label="Night" onclick="night();"></menuitem>
+		    <menuitem type="radio" radiogroup="modes" label="Day" onclick="day();"></menuitem>
+	    </menu>
+      <menu type="popup" label="About">
+		    <menuitem type="radio" radiogroup="about" label="About Markwrite" onclick="$('#container').show().load('texts/about.txt');"></menuitem>
+		    <menuitem type="radio" radiogroup="about" label="License" onclick="$('#container').show().load('texts/license.txt');"></menuitem>
+		    <menuitem type="radio" radiogroup="about" label="Source Code" onclick="$('#container').show().load('texts/source.txt');"></menuitem>
+	    </menu>
+    </div>
+   </section>
+</body>
+</html>

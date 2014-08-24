@@ -1,0 +1,5 @@
+<h2>Source Code</h2>
+The source code of <b>Markwrite</b> is hosted in github.<p>
+Feel free to fork it, clone it, update/upgrade it, add new features etc. And maybe send a pull request if you want to.<p>
+
+<a href="http://github.com/avasz/markwrite">http://github.com/avasz/markwrite</a>

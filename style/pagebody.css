@@ -1,0 +1,109 @@
+/*div.pagebody header {
+  background-image: url("images/dark_header.ng");
+  position: absolute;
+  top:-5rem;
+}*/
+
+/*div.pagebody {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 9rem;
+  bottom: 0rem;
+  opacity: 0;
+  z-index: -1;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  transition: opacity 0.2s;
+}
+
+div.pagebody[aria-expanded=true] {
+   opacity: 1;
+   z-index: 1;
+}
+*/
+
+#area{
+	position: relative;
+	height: 100%;
+	padding:0px;
+	width: 100%;
+}
+
+#textarea{
+	position: absolute;
+	float: left;
+	height: 99%;
+	width: 48.5%;
+	background: white;
+	margin-left:1%;
+	margin-top: 0.23%;
+	color: black;
+	font-size: 18px;
+	font-family: Arial, Helvetica, sans-serif;
+	border: none;
+	color: black;
+}
+#output{
+	float: right;
+  position: relative;
+  height: 99%;
+  width: 48.5%;
+  overflow: scroll;
+  background:#f2f2f2;
+  border: none;
+  margin-left: 1rem;
+  margin-right: 1%;
+  margin-top: 0.23%;
+  font-size: 18px;
+  padding-top: -2px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  color: black;
+  z-index: 1;
+}
+
+*{
+  margin-top: 0px;
+  z-index=0;
+}
+
+
+#container{
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+	height: 50%;
+
+  padding: 16px;
+  border: 10px solid #2F2F2F;
+  background-color: white;
+  z-index:1002;
+  overflow: scroll;
+	overflow-x: hidden;
+  font-size:15px;
+
+}
+
+
+
+blockquote{
+	border-left: 4px solid #DDDDDD;
+	padding-left: 10px;
+}
+
+pre{
+	border: 1px solid grey;
+	background: #DDDDDD;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+.nightpre, .nightcode{
+	background: #1D1F21;
+margin-left: 4%;
+margin-right: 4%;
+border: 1px solid grey;
+}

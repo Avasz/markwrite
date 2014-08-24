@@ -1,0 +1,44 @@
+<h3 id="em">Emphasis</h3>
+
+<p>Markdown treats asterisks (<code>*</code>) and underscores (<code>_</code>) as indicators of
+emphasis. Text wrapped with one <code>*</code> or <code>_</code> will be wrapped with an
+HTML <code>&lt;em&gt;</code> tag; double <code>*</code>’s or <code>_</code>’s will be wrapped with an HTML
+<code>&lt;strong&gt;</code> tag. E.g., this input:</p>
+
+<pre><code>*single asterisks*
+
+_single underscores_
+
+**double asterisks**
+
+__double underscores__
+</code></pre>
+
+<p>will produce:</p>
+
+<pre><code>&lt;em&gt;single asterisks&lt;/em&gt;
+
+&lt;em&gt;single underscores&lt;/em&gt;
+
+&lt;strong&gt;double asterisks&lt;/strong&gt;
+
+&lt;strong&gt;double underscores&lt;/strong&gt;
+</code></pre>
+
+<p>You can use whichever style you prefer; the lone restriction is that
+the same character must be used to open and close an emphasis span.</p>
+
+<p>Emphasis can be used in the middle of a word:</p>
+
+<pre><code>un*frigging*believable
+</code></pre>
+
+<p>But if you surround an <code>*</code> or <code>_</code> with spaces, it’ll be treated as a
+literal asterisk or underscore.</p>
+
+<p>To produce a literal asterisk or underscore at a position where it
+would otherwise be used as an emphasis delimiter, you can backslash
+escape it:</p>
+
+<pre><code>\*this text is surrounded by literal asterisks\*
+</code>

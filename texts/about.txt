@@ -1,0 +1,5 @@
+<h1>Markwrite</h1>
+<b>Markwrite</b> is an easy to use markdown to HTML application. It is an open webapp created using various open source technologies.
+It was developed by a group of students who are committed to Open Source and Open Web as a project work for their third year of Computer Engineering.<p>
+<p>
+<b>Credits:</b> John Fraser (showdown.js), John Gruber & Aaron Swartz (markdown)

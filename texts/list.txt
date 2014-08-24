@@ -1,0 +1,174 @@
+<h3 id="list">Lists</h3>
+
+<p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
+
+<p>Unordered lists use asterisks, pluses, and hyphens — interchangably
+— as list markers:</p>
+
+<pre><code>*   Red
+*   Green
+*   Blue
+</code></pre>
+
+<p>is equivalent to:</p>
+
+<pre><code>+   Red
++   Green
++   Blue
+</code></pre>
+
+<p>and:</p>
+
+<pre><code>-   Red
+-   Green
+-   Blue
+</code></pre>
+
+<p>Ordered lists use numbers followed by periods:</p>
+
+<pre><code>1.  Bird
+2.  McHale
+3.  Parish
+</code></pre>
+
+<p>It’s important to note that the actual numbers you use to mark the
+list have no effect on the HTML output Markdown produces. The HTML
+Markdown produces from the above list is:</p>
+
+<pre><code>&lt;ol&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;McHale&lt;/li&gt;
+&lt;li&gt;Parish&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<p>If you instead wrote the list in Markdown like this:</p>
+
+<pre><code>1.  Bird
+1.  McHale
+1.  Parish
+</code></pre>
+
+<p>or even:</p>
+
+<pre><code>3. Bird
+1. McHale
+8. Parish
+</code></pre>
+
+<p>you’d get the exact same HTML output. The point is, if you want to,
+you can use ordinal numbers in your ordered Markdown lists, so that
+the numbers in your source match the numbers in your published HTML.
+But if you want to be lazy, you don’t have to.</p>
+
+<p>If you do use lazy list numbering, however, you should still start the
+list with the number 1. At some point in the future, Markdown may support
+starting ordered lists at an arbitrary number.</p>
+
+<p>List markers typically start at the left margin, but may be indented by
+up to three spaces. List markers must be followed by one or more spaces
+or a tab.</p>
+
+<p>To make lists look nice, you can wrap items with hanging indents:</p>
+
+<pre><code>*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+    viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+    Suspendisse id sem consectetuer libero luctus adipiscing.
+</code></pre>
+
+<p>But if you want to be lazy, you don’t have to:</p>
+
+<pre><code>*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.
+*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.
+</code></pre>
+
+<p>If list items are separated by blank lines, Markdown will wrap the
+items in <code>&lt;p&gt;</code> tags in the HTML output. For example, this input:</p>
+
+<pre><code>*   Bird
+*   Magic
+</code></pre>
+
+<p>will turn into:</p>
+
+<pre><code>&lt;ul&gt;
+&lt;li&gt;Bird&lt;/li&gt;
+&lt;li&gt;Magic&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>But this:</p>
+
+<pre><code>*   Bird
+
+*   Magic
+</code></pre>
+
+<p>will turn into:</p>
+
+<pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>List items may consist of multiple paragraphs. Each subsequent
+paragraph in a list item must be indented by either 4 spaces
+or one tab:</p>
+
+<pre><code>1.  This is a list item with two paragraphs. Lorem ipsum dolor
+    sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+    mi posuere lectus.
+
+    Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+    sit amet velit.
+
+2.  Suspendisse id sem consectetuer libero luctus adipiscing.
+</code></pre>
+
+<p>It looks nice if you indent every line of the subsequent
+paragraphs, but here again, Markdown will allow you to be
+lazy:</p>
+
+<pre><code>*   This is a list item with two paragraphs.
+
+    This is the second paragraph in the list item. You're
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.
+
+*   Another item in the same list.
+</code></pre>
+
+<p>To put a blockquote within a list item, the blockquote’s <code>&gt;</code>
+delimiters need to be indented:</p>
+
+<pre><code>*   A list item with a blockquote:
+
+    &gt; This is a blockquote
+    &gt; inside a list item.
+</code></pre>
+
+<p>To put a code block within a list item, the code block needs
+to be indented <em>twice</em> — 8 spaces or two tabs:</p>
+
+<pre><code>*   A list item with a code block:
+
+        &lt;code goes here&gt;
+</code></pre>
+
+<p>It’s worth noting that it’s possible to trigger an ordered list by
+accident, by writing something like this:</p>
+
+<pre><code>1986. What a great season.
+</code></pre>
+
+<p>In other words, a <em>number-period-space</em> sequence at the beginning of a
+line. To avoid this, you can backslash-escape the period:</p>
+
+<pre><code>1986\. What a great season.

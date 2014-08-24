@@ -1,0 +1,127 @@
+header {
+  z-index: 1;
+  display: inline-block;
+  position:relative;
+  top:0;
+  left:0;
+  right:0;
+  height: 5rem;
+
+  width: 100%;
+  border-bottom: 0.1rem solid #919393;
+  color: #FFFFFF;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+}
+
+/* the toolbar*/
+
+#bar{
+position:relative;
+cursor: pointer;
+top: 0rem;
+height: 4rem;
+width: 100%;
+background: white;
+border-bottom: 0.1rem solid #919393;
+}
+
+#bar ul {
+  display: inline-table;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+#bar ul > li {
+  display: table-cell;
+  vertical-align: middle;
+  background: url("images/separator.png") no-repeat scroll right center / 2px 80%;
+  min-width: 1rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  text-align: center;
+  width: auto;
+  font-size: 1.4rem;
+  font-weight: 600;
+  height: 100%;
+}
+
+#bar ul > li:active {
+  background-color: #0095dd;
+}
+
+
+
+
+
+
+
+
+
+header h1, header h2 {
+  display: inline;
+  margin: 0;
+  font-weight: normal;
+  line-height: 6rem;
+  padding: 0 0 0 3rem;
+  overflow: hidden;
+
+
+
+}
+
+header h1 {
+  font-size: 3.3rem;
+
+}
+header h2 {
+  font-size: 1.9rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 3.0rem;
+}
+h4 {
+  font-size: 2.7rem;
+}
+h5 {
+  font-size: 2.4rem;
+}
+h6 {
+  font-size: 2.1rem;
+}
+
+
+header ul {
+  display: inline-table;
+  margin: 0px;
+  padding: 0px;
+  float: right;
+  height: 100%;
+}
+
+header ul > li {
+  display: table-cell;
+  vertical-align: middle;
+  background: url("images/separator.png") no-repeat scroll left center / 2px 80%;
+  min-width: 4rem;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  text-align: center;
+  width: auto;
+  font-size: 1.4rem;
+  font-weight: 600;
+  height: 100%;
+}
+
+header ul > li:active {
+  background-color: #0095dd;
+}
